@@ -262,6 +262,9 @@ const getSignature = (
   reason: string,
   signatureDetails: SignatureOptions,
 ) => {
+  
+  console.log(reason, signatureDetails);
+
   return pdf.ref({
     Type: 'Sig',
     Filter: 'Adobe.PPKLite',
@@ -272,7 +275,7 @@ const getSignature = (
     M: new Date(),
     ContactInfo: new String('${signatureDetails.email}'),
     Name: new String('${signatureDetails.signerName}'),
-    Location: new String('${signatureDetails.location}'),
+    Location: new String('${signatureDetails.location}')    
   })
 }
 

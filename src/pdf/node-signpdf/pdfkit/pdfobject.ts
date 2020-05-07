@@ -108,7 +108,7 @@ export class PDFObject {
   }
 
   static getConvertedString(object: any, encryptFunction: any) {
-    let string: any = object
+    let string: any = object.toString();
     let isUnicode = false
 
     for (let i = 0, end = string.length; i < end; i += 1) {
@@ -131,7 +131,12 @@ export class PDFObject {
     } else {
       string = stringBuffer.toString('binary')
     }
+
+    console.log(object, stringBuffer, string, isUnicode);
+
     string = string.replace((escapableRe: any, c: string) => escapable[c])
+
+    console.log(string, `(${string})`);
 
     return `(${string})`
   }

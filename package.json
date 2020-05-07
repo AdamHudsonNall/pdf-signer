@@ -1,6 +1,6 @@
 {
   "name": "@adamhudsonnall/pdf-signer",
-  "version": "1.0.6",
+  "version": "1.0.12",
   "description": "A JavaScript PDF signer for node.",
   "main": "dist/sign.js",
   "dependencies": {
