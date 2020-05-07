@@ -56,11 +56,11 @@ const pdfkitAddPlaceholder = async ({
   const ZAF = getFont(pdf, 'ZapfDingbats')
   const APFONT = getFont(pdf, 'Helvetica')
 
-  const hasImg = signatureOptions.annotationAppearanceOptions?.imageDetails?.imagePath
+  const hasImg = signatureOptions.annotationAppearanceOptions?.imageDetails?.image
 
   const IMG = hasImg
     ? await getImage(
-        (signatureOptions.annotationAppearanceOptions as any).imageDetails.imagePath,
+        (signatureOptions.annotationAppearanceOptions as any).imageDetails.image,
         pdf,
       )
     : undefined
@@ -270,9 +270,9 @@ const getSignature = (
     Contents: Buffer.from(String.fromCharCode(0).repeat(signatureLength)),
     Reason: new String(reason),
     M: new Date(),
-    ContactInfo: new String(`${signatureDetails.email}`),
-    Name: new String(`${signatureDetails.signerName}`),
-    Location: new String(`${signatureDetails.location}`),
+    ContactInfo: new String('${signatureDetails.email}'),
+    Name: new String('${signatureDetails.signerName}'),
+    Location: new String('${signatureDetails.location}'),
   })
 }
 

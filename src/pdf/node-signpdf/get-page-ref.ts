@@ -8,8 +8,9 @@ const getPageRef = (pdf: Buffer, info: any, shouldAnnotationAppearOnFirstPage: b
   const kidsStart = pagesDictionary.indexOf('[', kidsPosition) + 1
   const kidsEnd = pagesDictionary.indexOf(']', kidsPosition)
   const pages = pagesDictionary.slice(kidsStart, kidsEnd).toString()
-  const split = shouldAnnotationAppearOnFirstPage ? pages.trim().substring(0, 5) : pages.trim().substring(pages.length - 7, pages.length)
-
+  const pagesSplit = pages.trim().split(' ');
+  const split = shouldAnnotationAppearOnFirstPage ? pagesSplit.slice(0, 3): pagesSplit.slice(pagesSplit.length - 3);
+  //const split = shouldAnnotationAppearOnFirstPage ? pages.trim().substring(0, 5).replace(/\s/g, "") : pages.trim().substring(pages.length - 7, pages.length).replace(/\s/g, "")
   return `${split[0]} ${split[1]} ${split[2]}`
 }
 

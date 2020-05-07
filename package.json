@@ -1,6 +1,6 @@
 {
-  "name": "pdf-signer",
-  "version": "1.0.2",
+  "name": "@adamhudsonnall/pdf-signer",
+  "version": "1.0.6",
   "description": "A JavaScript PDF signer for node.",
   "main": "dist/sign.js",
   "dependencies": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vizicsaba89/pdf-signer.git"
+    "url": "git+https://github.com/adamhudsonnall/pdf-signer.git"
   },
   "author": "",
   "license": "MIT",
@@ -36,9 +36,9 @@
     "digital signature"
   ],
   "bugs": {
-    "url": "https://github.com/vizicsaba89/pdf-signer/issues"
+    "url": "https://github.com/adamhudsonnall/pdf-signer/issues"
   },
-  "homepage": "https://github.com/vizicsaba89/pdf-signer#readme",
+  "homepage": "https://github.com/adamhudsonnalln/pdf-signer#readme",
   "jest": {
     "globals": {
       "ts-jest": {
